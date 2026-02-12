@@ -15,10 +15,15 @@ html, body {
     font-family: 'Satoshi' , sans-serif;
     height: 100%;
     max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
     background-color: var(--ana-renk);
     font-size: 62.5%;
 }
+::selection{
+        color: var(--metin-renk);
+        background-color: var(--üçüncü-renk) ;
+    }
 /*reset bitiş*/
 /*header başlangıç*/
 header {
@@ -33,26 +38,60 @@ header {
 }
 header nav ul {
     width: 100%;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10rem;
     font-size: 2rem;
     list-style: none;
+    position: relative;
 }
 header nav ul li a {
     color: var(--metin-renk);
     text-decoration: none;
     font-weight:600;
+    transition: 300ms color;
+}
+header a::after {
+    content: "";
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    height: .6rem;
+    width: 11rem;
+    border-radius: 30px;
+    background-color: var(--üçüncü-renk); 
+    cursor: default;   
+}
+header a:hover{
+ color: var(--dördüncü-renk);
 }
 /*header bitiş*/
 /*main başlangıç*/
+.res {
+    position: fixed;
+    bottom: 3.3rem;
+    right: 4.4rem;
+    height: 4rem;
+    width: 4rem;
+    background-color: transparent;
+    border-radius: 100%;
+    z-index: 100;
+    outline-offset: 5px;
+    outline: 2px solid transparent;
+    transition: 300ms outline;
+}
+.res:hover {
+    transition: 300ms outline;
+    outline: 2px solid var(--dördüncü-renk);
+}
 /*anaSayfa başlangıç*/
 .anaSection {
-    width: 60%;
-    height: 50rem;
-    margin-left: 5%;
-    margin-top: 13%;
+    width: 90%;          
+    max-width: 1200px;   
+    margin: 13% 5%; 
+    height: auto;        
     position: relative;
 }
 .anaSection .anah1 {
@@ -72,7 +111,7 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     background-color: var(--üçüncü-renk);
-    height: 26rem;
+    min-height: 25rem;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -82,15 +121,14 @@ header nav ul li a {
     background-color: var(--ikinci-renk);
     font-size: 1.8rem;
     color: var(--metin-renk);
-    padding: 3rem;
-    margin: 3rem;
-    height: 80%;
+    padding: 3%;
+    margin: 3%;
+    min-height: 18rem;
     border-radius: 20px;
     text-indent: 30px;
     font-weight: 500;
     letter-spacing: 1%;
     line-height: 2.2rem;
-    
 }
 /*anaSayfa bitiş*/
 /*hakkında başlangıç*/
@@ -101,7 +139,6 @@ header nav ul li a {
     justify-content: center;
     align-items: start;
     position: relative;
-    background-color: red;
     margin-top: 10%;
 }
 .container1 {
@@ -149,6 +186,45 @@ header nav ul li a {
     line-height: 2.5rem;
     letter-spacing: 1%;
 }
+.container1 ul {
+    margin-top: 5%;
+    height: 5rem;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5%;
+}
+.container1 ul li {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 300ms transform;
+    transform: scale(1);
+}
+.container1 ul li:hover{
+    transition: 300ms transform;
+    transform: scale(1.2);
+}
+.container1 ul li span{
+    color: 	var(--metin-renk);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.container1 ul .html{
+    background-color: #E34C26;
+}
+.container1 ul .css{
+    background-color: #264de4;
+}
+.container1 ul .javascript{
+    background-color: #f0db4f;
+}
 .container2 .göreseld {
     width: 100%;
     height: 10%;
@@ -194,7 +270,6 @@ header nav ul li a {
     justify-content: start;
     align-items: start;
     flex-direction: column;
-
 }
 .özSection h2{
     font-size: 4rem;
@@ -271,7 +346,6 @@ header nav ul li a {
     font-size: 3rem;
     color: var(--metin-renk);
     margin: 1% 0;
-
 }
 .sertifikasec article {
     width: 100%;
@@ -279,11 +353,10 @@ header nav ul li a {
     display: flex;
     justify-content:space-between   ;
     align-items: center;
-    flex-direction: row;
-    
+    flex-direction: row;   
 }
 .sertifikasec .div1{
-    width: 40%;
+    width: 45%;
     height: 100%;
     background-color: var(--ana-renk);
     padding: 1rem;
@@ -292,7 +365,6 @@ header nav ul li a {
     border: solid 3px var(--dördüncü-renk);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
-
 .sertifikasec .div1 h4 {
     font-size: 2.5rem;
     color: var(--siyah);
@@ -314,7 +386,7 @@ header nav ul li a {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    padding: 2.5%;
+    padding: 1.4rem;
     background-color: var(--dördüncü-renk);
     border-radius: 40px;
     text-decoration:none ;
@@ -322,6 +394,12 @@ header nav ul li a {
     color: var(--metin-renk);
     font-weight: 600;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: 300ms outline;
+    outline: 3px solid transparent;
+}
+.sertifikasec a:hover {
+    transition: 300ms outline;
+    outline: 3px solid var(--üçüncü-renk);
 }
 .kariyersec {
     width: 60%;
@@ -387,10 +465,8 @@ header nav ul li a {
  font-size: 1.8rem;
 }
 .iletişimsec form textarea {
-    min-width: 50rem;
-    min-height: 20rem;
-    max-width: 50rem;
-    max-height: 20rem;
+    width: 50rem;
+    height: 20rem;
     appearance: none;
     border: 3px solid var(--üçüncü-renk);
     border-radius: 15px;
@@ -399,6 +475,7 @@ header nav ul li a {
     padding-top: 1rem;
     font-size: 1.8rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    outline: none;
 }
 .iletişimsec form textarea::placeholder {
     font-size: 1.8rem;
@@ -415,8 +492,15 @@ header nav ul li a {
     border: none;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: 300ms outline;
+    outline: 3px solid transparent;
+}
+.iletişimsec button:hover{
+    transition: 300ms outline;
+    outline: 3px solid var(--üçüncü-renk);
 }
 /*iletişim bitiş*/
+/*main bitiş*/
 /*footer başlangıç*/
 footer {
     height: 20vh;
@@ -428,8 +512,8 @@ footer {
     padding-top: 2rem;
     flex-direction: column;
     position: relative;
+    bottom: 0;
 }
-
 footer .sosyalsec ul{
     display: flex;
     flex-direction: row;
@@ -440,11 +524,19 @@ footer .sosyalsec ul{
     gap: 40px;
     list-style: none;
 }
-footer .sosyalsec ul li {
+footer .sosyalsec ul li a {
+    background-color: var(--metin-renk);
+    transform: scale(1);
+    transition: 300ms transform;
+    display: inline-block;
     height: 4rem;
     width: 4rem;
-    background-color: var(--metin-renk);
     border-radius: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+footer .sosyalsec ul li a:hover {
+    transition: 300ms transform;
+    transform: scale(1.2);
 }
 footer .navsec  {
     display: flex;
@@ -457,6 +549,10 @@ footer .navsec a {
     font-size: 1.6rem;
     text-decoration: none;
     color: var(--siyah);
+    transition: 300ms color;
+}
+footer .navsec a:hover{
+    color: var(--ikinci-renk);
 }
 
 footer .kişiselsec a{
@@ -464,7 +560,6 @@ footer .kişiselsec a{
     margin-top: 10rem;
     color: var(--ikinci-renk);
     text-decoration: none;
-
 }
 footer .konumsec {
     height: 5rem;
@@ -474,11 +569,129 @@ footer .konumsec {
     align-items: end;
 }
 footer .konumsec span {
+    position: absolute;
+    z-index: 99;
     font-size: 1.6rem;
-    margin-top: 10rem;
+    bottom: 0;
     color: var(--siyah);
 }
 /*footer bitiş*/
-/*main bitiş*/
-    
+/*scrol başlangıç*/
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--üçüncü-renk);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--ikinci-renk);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
+}
+/*scrol bitiş*/
+/*media etiketleri başlangıç*/
+
+/* Laptop / Desktop Orta */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .container1 {
+    grid-template-rows: .28fr 1.2fr 1fr;
+    }
+    .container1 .teknikp {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+.container1 .profilp {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+}
+  
+
+
+/* Laptop Küçük */
+@media (min-width: 768px) and (max-width: 1024px) {
+          .container1 {
+    grid-template-rows: .28fr 1.2fr 1fr;
+}
+  .container1 .teknikp {
+    font-size: 1.4rem;
+    line-height: 1.7rem;  
+}
+.container1 .profilp {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+.container1 .profilh3 {
+    font-size: 2.4rem;
+    margin-bottom: 0;
+}
+.container1 .teknikh3 {
+    font-size: 2.4rem;
+    margin-bottom: 0;
+}
+.container1 ul li {
+    height: 4rem;
+    width: 4rem;
+}
+header nav ul {
+    width: 100%;
+    height: 5rem;
+    gap: 5rem;
+    font-size: 1.8rem;
+}
+header a::after {
+    height: .6rem;
+    width: 9.5rem;
+}
+.anaSection .anah1 {
+    font-size: 4rem;
+    margin-bottom: 3%;
+}
+.eğitimd1 h4{
+    font-size: 1.8rem;
+    margin-bottom: 3px;
+}
+}
+
+/* Tablet */
+@media (min-width: 425px) and (max-width: 768px) {
+      .container1 {
+    grid-template-rows: .28fr 1.2fr 1fr;
+}
+  .container1 .teknikp {
+    font-size: 1.4rem;
+    line-height: 1.8rem;  
+}
+.container1 .profilp {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+.container1 .profilh3 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+.container1 .teknikh3 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+}
+
+/* Mobil Büyük / Phablet */
+@media (min-width: 375px) and (max-width: 425px) {
+  
+}
+
+/* Mobil Orta */
+@media (min-width: 320px) and (max-width: 372px) {
+  
+}
+
+/* Mobil Küçük (telefon) */
+@media (max-width: 320px) {
+  
+}
+
+/*media etiketleri bitiş*/    
  
