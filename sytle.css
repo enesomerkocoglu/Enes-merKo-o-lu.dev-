@@ -90,6 +90,11 @@ header a:hover{
     z-index: 100;
     outline-offset: 5px;
     outline: 2px solid transparent;
+    transition: 300ms outline;
+}
+.res:hover {
+    transition: 300ms outline;
+    outline: 2px solid var(--dördüncü-renk);
 }
 /*anaSayfa başlangıç*/
 .anaSection {
