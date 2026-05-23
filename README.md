@@ -19,15 +19,12 @@
 
 ##  Ekran Görüntüleri
 
-| Anasayfa | Hakkında |
-|:---:|:---:|
-| ![Anasayfa](https://github.com/user-attachments/assets/cab49f81-dcd5-44c4-a099-6e4815703c0d) | ![Hakkında](https://github.com/user-attachments/assets/8c05fbcf-80ba-4d53-8365-e08d525ddc2a) |
 
-| Özgeçmiş | Footer |
-|:---:|:---:|
-| ![Özgeçmiş](https://github.com/user-attachments/assets/7fa400ee-7514-45e1-84ed-0c2bae8bce05) | ![Footer](https://github.com/user-attachments/assets/f2d1aca5-0f80-41ca-a3a5-b15a39afe17d) |
+<img src="https://github.com/user-attachments/assets/cab49f81-dcd5-44c4-a099-6e4815703c0d" width="100%" />
+<img src="https://github.com/user-attachments/assets/8c05fbcf-80ba-4d53-8365-e08d525ddc2a" width="100%" />
+<img src="https://github.com/user-attachments/assets/7fa400ee-7514-45e1-84ed-0c2bae8bce05" width="100%" />
+<img src="https://github.com/user-attachments/assets/f2d1aca5-0f80-41ca-a3a5-b15a39afe17d" width="100%" />
 
----
 
 ## Sitenin Amacı
 
